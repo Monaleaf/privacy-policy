@@ -5,290 +5,288 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隐私政策</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            padding: 20px;
+        }
+        
         .container {
+            max-width: 800px;
+            margin: 0 auto;
             background: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
-
+        
         .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            height: 100rpx;
-            border-bottom: 1px solid #eee;
-            background: #fff;
-        }
-
-        .back-btn {
-            color: #007aff;
-            font-size: 32rpx;
-            padding: 0 32rpx;
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100rpx;
-            line-height: 100rpx;
-        }
-
-        .title {
-            flex: 1;
             text-align: center;
-            font-size: 36rpx;
+            padding: 20px 0;
+            border-bottom: 2px solid #007aff;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 28px;
             font-weight: bold;
             color: #222;
         }
-
-        .content {
-            flex: 1;
-            padding: 32rpx;
-            padding-top: 120rpx;
-            box-sizing: border-box;
-            min-height: 100vh;
-            overflow-y: auto;
-        }
-
+        
         .section {
-            margin-bottom: 32rpx;
+            margin-bottom: 30px;
         }
-
+        
         .section-title {
-            font-size: 30rpx;
+            font-size: 20px;
             font-weight: bold;
             color: #333;
-            margin-bottom: 12rpx;
-            display: block;
-        }
-
-        .section-text {
-            font-size: 28rpx;
-            color: #555;
-            line-height: 1.8;
-            display: block;
-            white-space: pre-line;
-        }
-
-        .sdk-table {
-            border: 1px solid #eee;
-            margin: 16rpx 0;
-        }
-
-        .sdk-row {
-            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
             border-bottom: 1px solid #eee;
         }
-
-        .sdk-header {
-            background: #f5f5f5;
+        
+        .section-text {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+        
+        .sdk-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007aff;
+        }
+        
+        .sdk-title {
             font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
         }
-
-        .sdk-col {
-            flex: 1;
-            padding: 8rpx;
-            font-size: 26rpx;
-            word-break: break-all;
+        
+        .sdk-detail {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
         }
-
+        
         .link {
             color: #007aff;
             text-decoration: underline;
-            cursor: pointer;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        
+        .contact-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+            
+            .section-text {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <span class="back-btn" id="backBtn">返回</span>
-            <span class="title">隐私政策</span>
+            <h1 class="title">隐私政策</h1>
         </div>
-        <div class="content">
-            <div class="section">
-                <span class="section-title">1. 引言</span>
-                <span class="section-text">
-                    欢迎您使用本应用！我们非常重视您的个人信息和隐私保护。在您使用本应用前，请仔细阅读本隐私政策，了解我们如何收集、使用、存储和保护您的信息。
-                    本隐私政策适用于“碳智云”APP（以下简称“本应用”），由厦门金名节能科技有限公司（以下简称“我们”）开发和运营。
-                </span>
+        
+        <div class="section">
+            <h2 class="section-title">1. 引言</h2>
+            <div class="section-text">
+欢迎您使用本应用！我们非常重视您的个人信息和隐私保护。在您使用本应用前，请仔细阅读本隐私政策，了解我们如何收集、使用、存储和保护您的信息。
+
+本隐私政策适用于"碳智云"APP（以下简称"本应用"），由厦门金名节能科技有限公司（以下简称"我们"）开发和运营。
             </div>
-            <div class="section">
-                <span class="section-title">2. 我们如何收集和使用您的信息</span>
-                <span class="section-text">
-                    为实现应用核心功能与服务，我们会收集如下信息：
-                    - 账号信息：如手机号、用户名等，用于注册、登录和身份验证。
-                    - 设备信息：如IMEI、IMSI、MAC地址、Android ID、OAID、MEID、ICCID、SN、SUPI、SUCI等，用于设备识别与安全保障。
-                    - 软件安装列表：用于安全风控与服务优化。
-                    - 位置信息：仅在您授权并使用相关功能（如考勤打卡、设备定位等）时收集。
-                    - 联系人、通话记录、日历、短信、本机电话号码：仅在您主动使用相关功能时采集。
-                    - 图片、音视频、剪切板：仅在您主动上传或授权时采集。
-                </span>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">2. 我们如何收集和使用您的信息</h2>
+            <div class="section-text">
+为实现应用核心功能与服务，我们会收集如下信息：
+
+- 账号信息：如手机号、用户名等，用于注册、登录和身份验证。
+- 设备信息：如IMEI、IMSI、MAC地址、Android ID、OAID、MEID、ICCID、SN、SUPI、SUCI等，用于设备识别与安全保障。
+- 软件安装列表：用于安全风控与服务优化。
+- 位置信息：仅在您授权并使用相关功能（如考勤打卡、设备定位等）时收集。
+- 联系人、通话记录、日历、短信、本机电话号码：仅在您主动使用相关功能时采集。
+- 图片、音视频、剪切板：仅在您主动上传或授权时采集。
             </div>
-            <div class="section">
-                <span class="section-title">3. 我们如何共享、转让、公开披露个人信息</span>
-                <span class="section-text">
-                    我们不会与任何公司、组织和个人分享您的个人信息，但以下情况除外：
-                    - 获得您的明确同意或授权；
-                    - 法律法规规定的情形；
-                    - 为实现核心功能或服务，部分信息会与第三方SDK共享，详见下方《第三方SDK目录》。
-                </span>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">3. 我们如何共享、转让、公开披露个人信息</h2>
+            <div class="section-text">
+我们不会与任何公司、组织和个人分享您的个人信息，但以下情况除外：
+
+- 获得您的明确同意或授权；
+- 法律法规规定的情形；
+- 为实现核心功能或服务，部分信息会与第三方SDK共享，详见下方《第三方SDK目录》。
             </div>
-            <div class="section">
-                <span class="section-title">4. 第三方SDK目录</span>
-                <span class="section-text">
-                    为保障本应用相关功能的实现与安全稳定运行，我们会接入部分第三方软件开发包（SDK）。我们会对接入的相关SDK进行严格安全监测，以保护您的个人信息安全。
-		    本应用部分第三方SDK（如支付宝原生扫码插件、JM保活前台运行插件等）为 DCloud 平台云端绑定模式，原生部分由平台在云端集成，部分初始化行为由平台控制，开发者无法完全控制原生SDK的初始化时机。
-		    我们已在前端代码中严格保证，只有在您同意隐私政策后才会主动调用相关功能。若平台自动初始化原生部分，属于平台行为，非开发者主动收集。具体如下：
-                </span>
-                <span class="section-text">
-                    为保障本应用相关功能的实现与安全稳定运行，本应用接入了以下第三方软件开发包（SDK）：
-                    <br /><br />
-                    1. <b>极光推送SDK</b><br />
-                    - 使用目的：用于消息推送服务<br />
-                    - 收集数据类型：设备标识符（IMEI、OAID、Android ID等）、位置信息等<br />
-                    - 官网链接：<a href="https://www.jiguang.cn/" target="_blank">https://www.jiguang.cn/</a>
-                    <br /><br />
-                    2. <b>友盟统计SDK</b><br />
-                    - 使用目的：用于数据统计与分析<br />
-                    - 收集数据类型：设备信息、使用行为等<br />
-                    - 官网链接：<a href="https://www.umeng.com/" target="_blank">https://www.umeng.com/</a>
-                    <br /><br />
-                    3. <b>高德地图/定位SDK</b><br />
-                    - 使用目的：用于地图显示、地理位置获取等功能<br />
-                    - 收集数据类型：设备位置信息、设备标识信息等<br />
-                    - 官网链接：<a href="https://lbs.amap.com/" target="_blank">https://lbs.amap.com/</a>
-                    <br /><br />
-                    4. <b>支付宝原生扫码插件（Mpaas-Scan）</b><br />
-                    - 使用目的：用于扫码识别功能<br />
-                    - 收集数据类型：相机权限、扫码内容、设备信息等<br />
-                    - 官网链接：<a href="https://ext.dcloud.net.cn/plugin?id=2636"
-                        target="_blank">https://ext.dcloud.net.cn/plugin?id=2636</a><br />
-                    - <b>合规说明：</b>本插件为 DCloud
-                    平台云端绑定模式，插件的原生部分由平台在云端集成，部分初始化行为由平台控制。我们已最大限度保证，只有在您同意隐私政策后才会主动调用相关扫码功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。
-                    <br /><br />
-                    5. <b>JM保活前台运行插件（HG-Background）</b><br />
-                    - 使用目的：提升App存活概率、前台服务保活<br />
-                    - 收集数据类型：设备信息、进程信息等<br />
-                    - 官网链接：<a href="https://ext.dcloud.net.cn/plugin?id=2203"
-                        target="_blank">https://ext.dcloud.net.cn/plugin?id=2203</a>
-                        <b>合规说明：</b>本插件为 DCloud 平台云端绑定模式，插件的原生部分由平台在云端集成，部分初始化行为由平台控制。我们已最大限度保证，只有在您同意隐私政策后才会主动调用相关保活功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。
-                    <br /><br />
-                    6. <b>百度地图JS API</b><br />
-                    - 使用目的：用于Web端地图展示<br />
-                    - 收集数据类型：位置信息、设备信息等<br />
-                    - 官网链接：<a href="https://lbsyun.baidu.com/" target="_blank">https://lbsyun.baidu.com/</a>
-                    <br /><br />
-                    7. <b>系统原生能力（如定位、相机、录音、NFC等）</b><br />
-                    - 使用目的：实现考勤打卡、设备定位、扫码、拍照、录音、NFC识别等核心功能<br />
-                    - 收集数据类型：位置信息、相机权限、音频权限、NFC信息、剪切板内容、文件读写等<br />
-                    - 官网链接：无
-                    <br /><br />
-                    仅在您同意本隐私政策后，相关SDK才会被初始化并收集信息。未同意前，应用及第三方SDK不会收集您的任何信息。
-                    <b>特别说明：</b>
-                    - 本应用部分第三方SDK（如支付宝原生扫码插件、JM保活前台运行插件等）为 DCloud 平台云端绑定模式，原生部分由平台在云端集成，部分初始化行为由平台控制，开发者无法完全控制原生SDK的初始化时机。
-                    - 我们已在前端代码中严格保证，只有在您同意隐私政策后才会主动调用相关功能。若平台自动初始化原生部分，属于平台行为，非开发者主动收集。
-                    - 我们已最大限度合规，敬请知悉。如有疑问可随时联系我们。
-                </span>
-                <div class="sdk-table">
-                    <div class="sdk-row sdk-header">
-                        <span class="sdk-col">SDK名称</span>
-                        <span class="sdk-col">使用目的</span>
-                        <span class="sdk-col">收集数据类型</span>
-                        <span class="sdk-col">官网链接</span>
-                    </div>
-                    <div class="sdk-row">
-                        <span class="sdk-col">极光推送SDK</span>
-                        <span class="sdk-col">消息推送</span>
-                        <span class="sdk-col">设备标识符（IMEI、OAID、Android ID等）、位置信息等</span>
-                        <span class="sdk-col link"
-                            onclick="window.open('https://www.jiguang.cn/', '_blank')">https://www.jiguang.cn/</span>
-                    </div>
-                    <div class="sdk-row">
-                        <span class="sdk-col">友盟统计SDK</span>
-                        <span class="sdk-col">数据统计与分析</span>
-                        <span class="sdk-col">设备信息、使用行为等</span>
-                        <span class="sdk-col link"
-                            onclick="window.open('https://www.umeng.com/', '_blank')">https://www.umeng.com/</span>
-                    </div>
-                    <div class="sdk-row">
-                        <span class="sdk-col">高德地图/定位SDK</span>
-                        <span class="sdk-col">地图显示、地理位置获取</span>
-                        <span class="sdk-col">设备位置信息、设备标识信息等</span>
-                        <span class="sdk-col link"
-                            onclick="window.open('https://lbs.amap.com/', '_blank')">https://lbs.amap.com/</span>
-                    </div>
-                    <div class="sdk-row">
-                        <span class="sdk-col">支付宝原生扫码插件（Mpaas-Scan）</span>
-                        <span class="sdk-col">扫码识别</span>
-                        <span class="sdk-col">相机权限、扫码内容、设备信息等</span>
-                        <span class="sdk-col link"
-                            onclick="window.open('https://ext.dcloud.net.cn/plugin?id=2636', '_blank')">https://ext.dcloud.net.cn/plugin?id=2636</span>
-                    </div>
-                    <div class="sdk-row">
-                        <span class="sdk-col">JM保活前台运行插件（HG-Background）</span>
-                        <span class="sdk-col">提升App存活概率、前台服务保活</span>
-                        <span class="sdk-col">设备信息、进程信息等</span>
-                        <span class="sdk-col link"
-                            onclick="window.open('https://ext.dcloud.net.cn/plugin?id=2203', '_blank')">https://ext.dcloud.net.cn/plugin?id=2203</span>
-                    </div>
-                    <div class="sdk-row">
-                        <span class="sdk-col">百度地图JS API</span>
-                        <span class="sdk-col">Web端地图展示</span>
-                        <span class="sdk-col">位置信息、设备信息等</span>
-                        <span class="sdk-col link"
-                            onclick="window.open('https://lbsyun.baidu.com/', '_blank')">https://lbsyun.baidu.com/</span>
-                    </div>
-                    <div class="sdk-row">
-                        <span class="sdk-col">系统原生能力（如定位、相机、录音、NFC等）</span>
-                        <span class="sdk-col">实现考勤打卡、设备定位、扫码、拍照、录音、NFC识别等核心功能</span>
-                        <span class="sdk-col">位置信息、相机权限、音频权限、NFC信息、剪切板内容、文件读写等</span>
-                        <span class="sdk-col">无</span>
-                    </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">4. 第三方SDK目录</h2>
+            <div class="section-text">
+为保障本应用相关功能的实现与安全稳定运行，本应用接入了以下第三方软件开发包（SDK）：
+            </div>
+            
+            <div class="sdk-item">
+                <div class="sdk-title">1. 极光推送SDK（个推公共库SDK）</div>
+                <div class="sdk-detail">- 使用目的：用于消息推送服务，确保您能及时收到重要通知</div>
+                <div class="sdk-detail">- 收集数据类型：设备标识符（IMEI、IMSI、MAC地址、Android ID、OAID、MEID、ICCID、SN、SUPI、SUCI）、位置信息等</div>
+                <div class="sdk-detail">- 收集目的：用于设备识别、推送消息精准送达、防止恶意注册</div>
+                <div class="sdk-detail">- 收集方式：通过SDK自动收集设备硬件信息</div>
+                <div class="sdk-detail">- 收集范围：仅收集必要的设备标识信息，不收集个人敏感信息</div>
+                <div class="sdk-detail">- 官网链接：<a href="https://www.jiguang.cn/" class="link" target="_blank">https://www.jiguang.cn/</a></div>
+                <div class="sdk-detail">- 合规说明：本SDK为DCloud平台云端绑定模式，部分初始化行为由平台控制。我们已严格保证只有在您同意隐私政策后才会主动调用相关功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。</div>
+            </div>
+            
+            <div class="sdk-item">
+                <div class="sdk-title">2. 友盟统计SDK</div>
+                <div class="sdk-detail">- 使用目的：用于数据统计与分析</div>
+                <div class="sdk-detail">- 收集数据类型：设备信息、使用行为等</div>
+                <div class="sdk-detail">- 官网链接：<a href="https://www.umeng.com/" class="link" target="_blank">https://www.umeng.com/</a></div>
+            </div>
+            
+            <div class="sdk-item">
+                <div class="sdk-title">3. 高德地图/定位SDK</div>
+                <div class="sdk-detail">- 使用目的：用于地图显示、地理位置获取等功能</div>
+                <div class="sdk-detail">- 收集数据类型：设备位置信息、设备标识信息等</div>
+                <div class="sdk-detail">- 官网链接：<a href="https://lbs.amap.com/" class="link" target="_blank">https://lbs.amap.com/</a></div>
+            </div>
+            
+            <div class="sdk-item">
+                <div class="sdk-title">4. 支付宝原生扫码插件（Mpaas-Scan）</div>
+                <div class="sdk-detail">- 使用目的：用于扫码识别功能</div>
+                <div class="sdk-detail">- 收集数据类型：相机权限、扫码内容、设备信息等</div>
+                <div class="sdk-detail">- 官网链接：<a href="https://ext.dcloud.net.cn/plugin?id=2636" class="link" target="_blank">https://ext.dcloud.net.cn/plugin?id=2636</a></div>
+                <div class="sdk-detail">- 合规说明：本插件为DCloud平台云端绑定模式，插件的原生部分由平台在云端集成，部分初始化行为由平台控制。我们已最大限度保证，只有在您同意隐私政策后才会主动调用相关扫码功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。</div>
+            </div>
+            
+            <div class="sdk-item">
+                <div class="sdk-title">5. JM保活前台运行插件（HG-Background）</div>
+                <div class="sdk-detail">- 使用目的：提升App存活概率、前台服务保活</div>
+                <div class="sdk-detail">- 收集数据类型：设备信息、进程信息等</div>
+                <div class="sdk-detail">- 官网链接：<a href="https://ext.dcloud.net.cn/plugin?id=2203" class="link" target="_blank">https://ext.dcloud.net.cn/plugin?id=2203</a></div>
+                <div class="sdk-detail">- 合规说明：本插件为DCloud平台云端绑定模式，插件的原生部分由平台在云端集成，部分初始化行为由平台控制。我们已最大限度保证，只有在您同意隐私政策后才会主动调用相关保活功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。</div>
+            </div>
+            
+            <div class="sdk-item">
+                <div class="sdk-title">6. 百度地图JS API</div>
+                <div class="sdk-detail">- 使用目的：用于Web端地图展示</div>
+                <div class="sdk-detail">- 收集数据类型：位置信息、设备信息等</div>
+                <div class="sdk-detail">- 官网链接：<a href="https://lbsyun.baidu.com/" class="link" target="_blank">https://lbsyun.baidu.com/</a></div>
+            </div>
+            
+            <div class="sdk-item">
+                <div class="sdk-title">7. 系统原生能力（如定位、相机、录音、NFC等）</div>
+                <div class="sdk-detail">- 使用目的：实现考勤打卡、设备定位、扫码、拍照、录音、NFC识别等核心功能</div>
+                <div class="sdk-detail">- 收集数据类型：位置信息、相机权限、音频权限、NFC信息、剪切板内容、文件读写等</div>
+                <div class="sdk-detail">- 官网链接：无</div>
+            </div>
+            
+            <div class="highlight">
+                <strong>特别说明：</strong>
+                - 本应用部分第三方SDK（如支付宝原生扫码插件、JM保活前台运行插件等）为DCloud平台云端绑定模式，原生部分由平台在云端集成，部分初始化行为由平台控制，开发者无法完全控制原生SDK的初始化时机。
+                - 我们已在前端代码中严格保证，只有在您同意隐私政策后才会主动调用相关功能。若平台自动初始化原生部分，属于平台行为，非开发者主动收集。
+                - 我们已最大限度合规，敬请知悉。如有疑问可随时联系我们。
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">5. 您的权利</h2>
+            <div class="section-text">
+您有权访问、更正、删除您的个人信息，有权撤回同意。可通过应用内设置或联系客服行使上述权利。
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">6. 信息存储与保护</h2>
+            <div class="section-text">
+您的个人信息将被加密存储在安全的服务器中，并采取多种安全措施防止信息泄露、损毁或丢失。
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">7. 隐私政策的变更</h2>
+            <div class="section-text">
+如本隐私政策有重大变更，我们会在App内或网页显著位置进行公告，并及时更新本政策内容。请您定期查阅。
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">8. 联系我们</h2>
+            <div class="contact-info">
+                <div class="section-text">
+如您对本政策有任何疑问、意见或建议，可通过官方网站联系我们：
+- 官方网站：<a href="http://www.xmjmjn.com/" class="link" target="_blank">http://www.xmjmjn.com/</a>
                 </div>
             </div>
-            <div class="section">
-                <span class="section-title">5. 您的权利</span>
-                <span class="section-text">
-                    您有权访问、更正、删除您的个人信息，有权撤回同意。可通过应用内设置或联系客服行使上述权利。
-                </span>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">9. 特别提示</h2>
+            <div class="section-text">
+- 未同意本隐私政策前，应用不会初始化任何敏感SDK，也不会申请任何敏感权限，部分功能将无法使用。
+- 同意本政策即表示您已充分理解并同意我们对您的个人信息的收集和使用。
             </div>
-            <div class="section">
-                <span class="section-title">6. 信息存储与保护</span>
-                <span class="section-text">
-                    您的个人信息将被加密存储在安全的服务器中，并采取多种安全措施防止信息泄露、损毁或丢失。
-                </span>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">10. 自启动和关联启动说明</h2>
+            <div class="section-text">
+为保障消息推送服务的正常运行，本应用可能需要自启动或关联启动：
+
+- 自启动目的：确保推送消息能够及时送达，提升用户体验
+- 关联启动场景：当您使用其他应用时，可能需要启动本应用以接收相关通知
+- 启动频率：仅在必要时启动，不会频繁自启动
+- 用户控制：您可以在系统设置中关闭本应用的自启动权限
+
+我们承诺：
+- 仅在必要时进行自启动，不会恶意占用系统资源
+- 自启动行为仅用于核心功能实现，不会收集额外信息
+- 您可随时在系统设置中关闭自启动权限
             </div>
-            <div class="section">
-                <span class="section-title">7. 隐私政策的变更</span>
-                <span class="section-text">
-                    如本隐私政策有重大变更，我们会在App内或网页显著位置进行公告，并及时更新本政策内容。请您定期查阅。
-                </span>
-            </div>
-            <div class="section">
-                <span class="section-title">8. 联系我们</span>
-                <span class="section-text">
-                    如您对本政策有任何疑问、意见或建议，可通过官方网站联系我们：
-                    - 官方网站：http://www.xmjmjn.com/
-                </span>
-            </div>
-            <div class="section">
-                <span class="section-title">9. 特别提示</span>
-                <span class="section-text">
-                    - 未同意本隐私政策前，应用不会初始化任何敏感SDK，也不会申请任何敏感权限，部分功能将无法使用。
-                    - 同意本政策即表示您已充分理解并同意我们对您的个人信息的收集和使用。
-                </span>
+        </div>
+        
+        <div class="section">
+            <div class="section-text" style="text-align: center; color: #999; font-size: 14px; margin-top: 50px;">
+                最后更新时间：2024年12月
             </div>
         </div>
     </div>
-
-    <script>
-        document.getElementById('backBtn').addEventListener('click', function() {
-            window.history.back();
-        });
-    </script>
 </body>
 </html>
