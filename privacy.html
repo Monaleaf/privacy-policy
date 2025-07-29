@@ -32,10 +32,6 @@
             border-left: 4px solid #3498db;
             padding-left: 15px;
         }
-        h3 {
-            color: #2c3e50;
-            margin-top: 25px;
-        }
         p {
             margin: 15px 0;
             text-align: justify;
@@ -53,20 +49,6 @@
             border-left: 4px solid #e74c3c;
             margin: 20px 0;
         }
-        .sdk-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        .sdk-table th, .sdk-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .sdk-table th {
-            background-color: #f8f9fa;
-            font-weight: bold;
-        }
         .contact {
             background-color: #e8f4fd;
             padding: 20px;
@@ -79,11 +61,8 @@
     <div class="container">
         <h1>碳智云隐私政策</h1>
         
-        <p><strong>更新日期：</strong>2024年1月1日</p>
-        <p><strong>生效日期：</strong>2024年1月1日</p>
-
         <h2>1. 引言</h2>
-        <p>欢迎您使用碳智云！我们非常重视您的个人信息和隐私保护。在您使用本应用前，请仔细阅读本隐私政策，了解我们如何收集、使用、存储和保护您的信息。</p>
+        <p>欢迎您使用本应用！我们非常重视您的个人信息和隐私保护。在您使用本应用前，请仔细阅读本隐私政策，了解我们如何收集、使用、存储和保护您的信息。</p>
         <p>本隐私政策适用于"碳智云"APP（以下简称"本应用"），由厦门金名节能科技有限公司（以下简称"我们"）开发和运营。</p>
 
         <h2>2. 我们如何收集和使用您的信息</h2>
@@ -100,53 +79,158 @@
             <li><strong>日志信息：</strong>用于问题诊断和系统维护</li>
         </ul>
 
-        <h2>3. 第三方SDK目录</h2>
+        <h2>3. 我们如何共享、转让、公开披露个人信息</h2>
+        <p>我们不会与任何公司、组织和个人分享您的个人信息，但以下情况除外：</p>
+        <ul>
+            <li>获得您的明确同意或授权；</li>
+            <li>法律法规规定的情形；</li>
+            <li>为实现核心功能或服务，部分信息会与第三方SDK共享，详见下方《第三方SDK目录》。</li>
+        </ul>
+
+        <h2>4. 第三方SDK目录</h2>
         <p>为保障本应用相关功能的实现与安全稳定运行，本应用接入了以下第三方软件开发包（SDK）：</p>
-        
-        <table class="sdk-table">
-            <thead>
-                <tr>
-                    <th>SDK名称</th>
-                    <th>用途</th>
-                    <th>收集数据类型</th>
-                    <th>官网链接</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>极光推送SDK</td>
-                    <td>消息推送服务</td>
-                    <td>设备标识符、位置信息</td>
-                    <td><a href="https://www.jiguang.cn/" target="_blank">https://www.jiguang.cn/</a></td>
-                </tr>
-                <tr>
-                    <td>高德地图SDK</td>
-                    <td>地图显示和定位功能</td>
-                    <td>位置信息、设备标识信息</td>
-                    <td><a href="https://lbs.amap.com/" target="_blank">https://lbs.amap.com/</a></td>
-                </tr>
-                <tr>
-                    <td>支付宝扫码插件</td>
-                    <td>扫码识别功能</td>
-                    <td>相机权限、扫码内容</td>
-                    <td><a href="https://ext.dcloud.net.cn/plugin?id=2636" target="_blank">插件详情</a></td>
-                </tr>
-                <tr>
-                    <td>友盟统计SDK</td>
-                    <td>数据统计与分析</td>
-                    <td>设备信息、使用行为</td>
-                    <td><a href="https://www.umeng.com/" target="_blank">https://www.umeng.com/</a></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <h3>1. 极光推送SDK（个推公共库SDK）</h3>
+        <ul>
+            <li><strong>用途：</strong>用于消息推送服务，确保您能及时收到重要通知</li>
+            <li><strong>收集数据类型：</strong>设备标识符（IMEI、IMSI、MAC地址、Android ID、OAID、MEID、ICCID、SN、SUPI、SUCI）、位置信息等</li>
+            <li><strong>收集目的：</strong>用于设备识别、推送消息精准送达、防止恶意注册、提升推送成功率</li>
+            <li><strong>收集方式：</strong>通过SDK自动收集设备硬件信息，包括但不限于设备唯一标识符</li>
+            <li><strong>收集范围：</strong>仅收集必要的设备标识信息，不收集个人敏感信息如姓名、手机号等</li>
+            <li><strong>数据存储期限：</strong>设备标识符在您使用期间保存，卸载应用后30天内删除</li>
+            <li><strong>数据安全措施：</strong>数据传输采用HTTPS加密，存储采用AES加密</li>
+            <li><strong>用户权利：</strong>您可通过应用内设置关闭推送，或联系客服删除推送相关数据</li>
+            <li><strong>数据共享：</strong>不会与第三方共享您的个人信息</li>
+            <li><strong>官网链接：</strong><a href="https://www.jiguang.cn/" target="_blank">https://www.jiguang.cn/</a></li>
+            <li><strong>合规说明：</strong>本SDK为DCloud平台云端绑定模式，部分初始化行为由平台控制。我们已严格保证只有在您同意隐私政策后才会主动调用相关功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。</li>
+        </ul>
+
+        <h3>2. 友盟统计SDK</h3>
+        <ul>
+            <li><strong>用途：</strong>用于数据统计与分析</li>
+            <li><strong>收集数据类型：</strong>设备信息、使用行为等</li>
+            <li><strong>收集目的：</strong>用于应用性能优化和用户体验改进</li>
+            <li><strong>收集方式：</strong>通过SDK自动收集设备信息和使用行为</li>
+            <li><strong>数据存储期限：</strong>统计数据在您使用期间保存，卸载应用后30天内删除</li>
+            <li><strong>数据安全措施：</strong>数据传输采用加密传输</li>
+            <li><strong>用户权利：</strong>您可通过应用内设置关闭统计功能</li>
+            <li><strong>官网链接：</strong><a href="https://www.umeng.com/" target="_blank">https://www.umeng.com/</a></li>
+            <li><strong>合规说明：</strong>本SDK仅用于统计分析，不会收集个人敏感信息</li>
+        </ul>
+
+        <h3>3. 高德地图/定位SDK</h3>
+        <ul>
+            <li><strong>用途：</strong>用于地图显示、地理位置获取等功能</li>
+            <li><strong>收集数据类型：</strong>设备位置信息、设备标识信息等</li>
+            <li><strong>收集目的：</strong>用于地图显示、地理编码、路径规划等功能</li>
+            <li><strong>位置信息精度：</strong>仅收集必要的位置精度信息，不会收集精确位置</li>
+            <li><strong>位置信息存储：</strong>位置信息仅在本地临时存储，不会上传到云端</li>
+            <li><strong>位置信息使用：</strong>仅用于地图显示和定位功能，不会用于其他用途</li>
+            <li><strong>数据安全措施：</strong>位置信息传输采用HTTPS加密</li>
+            <li><strong>用户权利：</strong>您可随时关闭位置权限，或通过系统设置管理位置权限</li>
+            <li><strong>官网链接：</strong><a href="https://lbs.amap.com/" target="_blank">https://lbs.amap.com/</a></li>
+            <li><strong>合规说明：</strong>本SDK为DCloud平台云端绑定模式，部分初始化行为由平台控制。我们已严格保证只有在您同意隐私政策后才会主动调用相关功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。</li>
+        </ul>
+
+        <h3>4. 支付宝原生扫码插件（Mpaas-Scan）</h3>
+        <ul>
+            <li><strong>用途：</strong>用于扫码识别功能</li>
+            <li><strong>收集数据类型：</strong>相机权限、扫码内容、设备信息等</li>
+            <li><strong>相机权限使用：</strong>仅用于扫码识别功能，不会用于其他用途</li>
+            <li><strong>扫码内容处理：</strong>扫码内容仅在本地处理，不会上传到云端</li>
+            <li><strong>数据安全措施：</strong>扫码数据传输采用加密传输</li>
+            <li><strong>用户权利：</strong>您可随时关闭相机权限，或通过系统设置管理相机权限</li>
+            <li><strong>官网链接：</strong><a href="https://ext.dcloud.net.cn/plugin?id=2636" target="_blank">https://ext.dcloud.net.cn/plugin?id=2636</a></li>
+            <li><strong>合规说明：</strong>本插件为DCloud平台云端绑定模式，插件的原生部分由平台在云端集成，部分初始化行为由平台控制。我们已最大限度保证，只有在您同意隐私政策后才会主动调用相关扫码功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。</li>
+        </ul>
+
+        <h3>5. JM保活前台运行插件（HG-Background）</h3>
+        <ul>
+            <li><strong>用途：</strong>提升App存活概率、前台服务保活</li>
+            <li><strong>收集数据类型：</strong>设备信息、进程信息等</li>
+            <li><strong>保活目的：</strong>仅用于提升应用存活概率，确保推送消息能够及时送达</li>
+            <li><strong>数据收集：</strong>仅收集必要的进程信息，不会收集个人敏感信息</li>
+            <li><strong>系统资源使用：</strong>仅在必要时使用系统资源，不会恶意占用</li>
+            <li><strong>用户控制：</strong>您可在系统设置中关闭自启动权限</li>
+            <li><strong>官网链接：</strong><a href="https://ext.dcloud.net.cn/plugin?id=2203" target="_blank">https://ext.dcloud.net.cn/plugin?id=2203</a></li>
+            <li><strong>合规说明：</strong>本插件为DCloud平台云端绑定模式，插件的原生部分由平台在云端集成，部分初始化行为由平台控制。我们已最大限度保证，只有在您同意隐私政策后才会主动调用相关保活功能，但部分原生初始化行为可能由平台自动完成，敬请知悉。</li>
+        </ul>
+
+        <h3>6. 百度地图JS API</h3>
+        <ul>
+            <li><strong>收集目的：</strong>用于Web端地图展示和定位功能</li>
+            <li><strong>位置信息精度：</strong>仅收集必要的位置精度信息，不会收集精确位置</li>
+            <li><strong>位置信息存储：</strong>位置信息仅在本地临时存储，不会上传到云端</li>
+            <li><strong>位置信息使用：</strong>仅用于地图功能，不会用于其他用途</li>
+            <li><strong>数据安全措施：</strong>位置信息传输采用HTTPS加密</li>
+            <li><strong>用户权利：</strong>您可随时关闭位置权限，或通过系统设置管理位置权限</li>
+            <li><strong>官网链接：</strong><a href="https://lbsyun.baidu.com/" target="_blank">https://lbsyun.baidu.com/</a></li>
+            <li><strong>合规说明：</strong>本SDK仅用于地图功能，不会用于其他用途</li>
+        </ul>
+
+        <h3>7. 系统原生能力（如定位、相机、录音、NFC等）</h3>
+        <ul>
+            <li><strong>用途：</strong>实现考勤打卡、设备定位、扫码、拍照、录音、NFC识别等核心功能</li>
+            <li><strong>收集数据类型：</strong>位置信息、相机权限、音频权限、NFC信息、剪切板内容、文件读写等</li>
+            <li><strong>权限使用说明：</strong>这些系统权限仅在您主动使用相关功能时申请，我们不会在您未授权的情况下收集相关信息</li>
+            <li><strong>数据使用范围：</strong>所有权限使用都有明确的功能目的，不会用于其他用途</li>
+            <li><strong>数据存储：</strong>相关数据仅在本地临时存储，不会上传到云端</li>
+            <li><strong>用户控制：</strong>您可随时通过系统设置管理相关权限</li>
+            <li><strong>官网链接：</strong>无</li>
+            <li><strong>合规说明：</strong>这些系统权限仅在您主动使用相关功能时申请，我们不会在您未授权的情况下收集相关信息。所有权限使用都有明确的功能目的，不会用于其他用途。</li>
+        </ul>
+
+        <h3>8. DCloud平台云端绑定SDK</h3>
+        <ul>
+            <li><strong>使用目的：</strong>DCloud平台为提供基础服务而集成的SDK</li>
+            <li><strong>收集数据类型：</strong>设备信息、应用运行状态、错误日志等</li>
+            <li><strong>数据使用目的：</strong>仅用于应用运行环境提供和错误诊断</li>
+            <li><strong>数据安全措施：</strong>数据传输采用加密传输，存储采用安全存储</li>
+            <li><strong>数据共享：</strong>不会与第三方共享您的个人信息</li>
+            <li><strong>用户权利：</strong>您可通过应用内设置管理相关权限</li>
+            <li><strong>官网链接：</strong><a href="https://www.dcloud.io/" target="_blank">https://www.dcloud.io/</a></li>
+            <li><strong>合规说明：</strong>这些SDK由DCloud平台在云端自动集成，开发者无法完全控制其初始化时机。我们已在前端代码中严格保证只有在用户同意后才会主动调用相关功能。</li>
+        </ul>
+
+        <h3>9. UniPush推送服务SDK</h3>
+        <ul>
+            <li><strong>收集目的：</strong>用于消息推送服务，确保您能及时收到重要通知</li>
+            <li><strong>数据存储期限：</strong>设备标识符在您使用期间保存，卸载应用后30天内删除</li>
+            <li><strong>数据安全措施：</strong>数据传输采用HTTPS加密，存储采用AES加密</li>
+            <li><strong>用户权利：</strong>您可通过应用内设置关闭推送，或联系客服删除推送相关数据</li>
+            <li><strong>数据共享：</strong>不会与第三方共享您的个人信息</li>
+            <li><strong>官网链接：</strong><a href="https://uniapp.dcloud.io/unipush-v2.html" target="_blank">https://uniapp.dcloud.io/unipush-v2.html</a></li>
+            <li><strong>合规说明：</strong>本SDK为DCloud平台云端绑定模式，部分初始化行为由平台控制</li>
+        </ul>
+
+        <h3>10. 高德地图云端服务SDK</h3>
+        <ul>
+            <li><strong>收集目的：</strong>用于地图显示、地理编码、路径规划等功能</li>
+            <li><strong>位置信息精度：</strong>仅收集必要的位置精度信息，不会收集精确位置</li>
+            <li><strong>位置信息存储：</strong>位置信息仅在本地临时存储，不会上传到云端</li>
+            <li><strong>位置信息使用：</strong>仅用于地图功能，不会用于其他用途</li>
+            <li><strong>数据安全措施：</strong>位置信息传输采用HTTPS加密</li>
+            <li><strong>用户权利：</strong>您可随时关闭位置权限，或通过系统设置管理位置权限</li>
+            <li><strong>官网链接：</strong><a href="https://lbs.amap.com/" target="_blank">https://lbs.amap.com/</a></li>
+            <li><strong>合规说明：</strong>云端服务部分由高德地图平台控制，开发者无法完全控制数据收集时机</li>
+        </ul>
 
         <div class="highlight">
-            <h3>特别说明：</h3>
-            <p>本应用部分第三方SDK为DCloud平台云端绑定模式，包括极光推送SDK、高德地图SDK等。这些云端绑定SDK的原生部分由平台在云端集成，部分初始化行为由平台控制，开发者无法完全控制原生SDK的初始化时机。</p>
+            <p><strong>特别说明：</strong></p>
+            <p>仅在您同意本隐私政策后，相关SDK才会被初始化并收集信息。未同意前，应用及第三方SDK不会收集您的任何信息。</p>
+            <p>本应用部分第三方SDK为DCloud平台云端绑定模式，包括：</p>
+            <ul>
+                <li>个推推送SDK（unipush）：用于消息推送服务，收集设备标识符、位置信息等</li>
+                <li>高德地图SDK（amap）：用于地图显示和定位功能，收集位置信息、设备标识信息等</li>
+                <li>JM保活前台运行插件（HG-Background）：用于提升应用存活概率，收集设备信息、进程信息等</li>
+                <li>支付宝原生扫码插件（Mpaas-Scan）：用于扫码识别功能，收集相机权限、扫码内容、设备信息等</li>
+            </ul>
+            <p>这些云端绑定SDK的原生部分由平台在云端集成，部分初始化行为由平台控制，开发者无法完全控制原生SDK的初始化时机。</p>
             <p>我们已在前端代码中严格保证，只有在您同意隐私政策后才会主动调用相关功能。若平台自动初始化原生部分，属于平台行为，非开发者主动收集。</p>
+            <p>我们已最大限度合规，敬请知悉。如有疑问可随时联系我们。</p>
         </div>
 
-        <h2>4. 您的权利</h2>
+        <h2>5. 您的权利</h2>
         <p>您享有以下权利：</p>
         <ul>
             <li><strong>访问权：</strong>您有权访问我们收集的您的个人信息</li>
@@ -155,8 +239,14 @@
             <li><strong>撤回同意权：</strong>您有权撤回对隐私政策的同意</li>
             <li><strong>投诉举报权：</strong>您有权向相关部门投诉或举报</li>
         </ul>
+        <p>行使权利的方式：</p>
+        <ul>
+            <li>通过应用内设置进行相关操作</li>
+            <li>通过官方联系方式联系我们</li>
+            <li>通过客服热线进行咨询和投诉</li>
+        </ul>
 
-        <h2>5. 信息存储与保护</h2>
+        <h2>6. 信息存储与保护</h2>
         <p>我们采取以下措施保护您的个人信息：</p>
         <ul>
             <li><strong>数据加密：</strong>所有敏感数据均采用HTTPS加密传输，存储采用AES加密</li>
@@ -164,31 +254,105 @@
             <li><strong>安全审计：</strong>定期进行安全检查和漏洞修复</li>
             <li><strong>数据备份：</strong>建立完善的数据备份和恢复机制</li>
         </ul>
-
-        <h2>6. 自启动和关联启动说明</h2>
-        <p>为保障消息推送服务的正常运行，本应用可能需要自启动或关联启动：</p>
+        <p>数据存储期限：</p>
         <ul>
-            <li><strong>自启动目的：</strong>确保推送消息能够及时送达，提升用户体验</li>
-            <li><strong>关联启动场景：</strong>当您使用其他应用时，可能需要启动本应用以接收相关通知</li>
-            <li><strong>启动频率：</strong>仅在必要时启动，不会频繁自启动</li>
-            <li><strong>用户控制：</strong>您可以在系统设置中关闭本应用的自启动权限</li>
+            <li>账号信息：在您使用期间持续保存，注销后30天内删除</li>
+            <li>设备信息：在您使用期间保存，卸载应用后30天内删除</li>
+            <li>位置信息：仅在本地临时存储，关闭应用后立即删除</li>
+            <li>第三方SDK数据：按照各SDK提供商的隐私政策执行</li>
+        </ul>
+        <p>数据存储地点：</p>
+        <ul>
+            <li>所有数据均存储在中国境内</li>
+            <li>不会将您的个人信息传输到境外</li>
         </ul>
 
         <h2>7. 隐私政策的变更</h2>
         <p>如本隐私政策有重大变更，我们会在App内或网页显著位置进行公告，并及时更新本政策内容。请您定期查阅。</p>
 
-        <div class="contact">
-            <h2>8. 联系我们</h2>
-            <p>如您对本政策有任何疑问、意见或建议，可通过以下方式联系我们：</p>
-            <ul>
-                <li><strong>官方网站：</strong><a href="http://www.xmjmjn.com/" target="_blank">http://www.xmjmjn.com/</a></li>
-                <li><strong>公司名称：</strong>厦门金名节能科技有限公司</li>
-                <li><strong>应用名称：</strong>碳智云</li>
-            </ul>
-        </div>
+        <h2>8. 联系我们</h2>
+        <p>如您对本政策有任何疑问、意见或建议，可通过官方网站联系我们：</p>
+        <ul>
+            <li><strong>官方网站：</strong><a href="http://www.xmjmjn.com/" target="_blank">http://www.xmjmjn.com/</a></li>
+        </ul>
 
-        <div class="highlight">
-            <h3>重要提示</h3>
+        <h2>9. 特别提示</h2>
+        <ul>
+            <li>未同意本隐私政策前，应用不会初始化任何敏感SDK，也不会申请任何敏感权限，部分功能将无法使用。</li>
+            <li>同意本政策即表示您已充分理解并同意我们对您的个人信息的收集和使用。</li>
+        </ul>
+
+        <h2>10. 自启动和关联启动说明</h2>
+        <p>为保障消息推送服务的正常运行，本应用可能需要自启动或关联启动：</p>
+        <ul>
+            <li><strong>自启动目的：</strong>确保推送消息能够及时送达，提升用户体验，防止重要通知丢失</li>
+            <li><strong>关联启动场景：</strong>当您使用其他应用时，可能需要启动本应用以接收相关通知</li>
+            <li><strong>启动频率：</strong>仅在必要时启动，不会频繁自启动，不会恶意占用系统资源</li>
+            <li><strong>用户控制：</strong>您可以在系统设置中关闭本应用的自启动权限</li>
+            <li><strong>影响范围：</strong>自启动仅用于核心功能实现，不会收集额外信息</li>
+        </ul>
+        <p>我们承诺：</p>
+        <ul>
+            <li>仅在必要时进行自启动，不会恶意占用系统资源</li>
+            <li>自启动行为仅用于核心功能实现，不会收集额外信息</li>
+            <li>您可随时在系统设置中关闭自启动权限</li>
+            <li>自启动行为符合相关法律法规要求</li>
+        </ul>
+
+        <h2>11. 技术限制说明</h2>
+        <p>由于技术架构限制，本应用部分功能使用了DCloud平台云端绑定SDK：</p>
+        <p><strong>技术说明：</strong></p>
+        <p>本应用使用了DCloud平台云端绑定SDK，由于技术架构限制，部分SDK的原生初始化行为由平台控制，开发者无法完全控制初始化时机。我们已在前端代码中严格保证只有在用户同意隐私政策后才会主动调用相关功能。若平台自动初始化原生部分，属于平台行为，非开发者主动收集。</p>
+        <ul>
+            <li>云端绑定SDK的原生部分由DCloud平台在云端集成</li>
+            <li>部分初始化行为由平台控制，开发者无法完全控制初始化时机</li>
+            <li>我们已在前端代码中严格保证只有在用户同意后才会主动调用相关功能</li>
+            <li>若平台自动初始化原生部分，属于平台行为，非开发者主动收集</li>
+            <li>我们已最大限度合规，敬请知悉</li>
+        </ul>
+        <p><strong>云端SDK的特殊性：</strong></p>
+        <ul>
+            <li>这些SDK的原生部分由各平台在云端集成</li>
+            <li>平台可能在应用启动时自动初始化部分功能</li>
+            <li>开发者无法完全控制云端SDK的初始化时机</li>
+            <li>我们已在前端代码中严格保证只有在用户同意后才会主动调用相关功能</li>
+        </ul>
+        <p><strong>合规措施：</strong></p>
+        <ul>
+            <li>我们已在前端代码中实施严格的隐私检查</li>
+            <li>只有在用户明确同意后才会主动调用相关功能</li>
+            <li>若平台自动初始化原生部分，属于平台行为，非开发者主动收集</li>
+            <li>我们已最大限度合规，敬请知悉</li>
+        </ul>
+        <p>如您对此有任何疑问，可通过官方联系方式与我们联系。</p>
+
+        <h2>12. 数据安全保护措施</h2>
+        <p>我们采用行业标准的安全技术保护您的个人信息：</p>
+        <ul>
+            <li><strong>传输安全：</strong>使用HTTPS加密传输所有数据</li>
+            <li><strong>存储安全：</strong>采用AES加密存储敏感数据</li>
+            <li><strong>访问控制：</strong>实施严格的权限管理和访问控制</li>
+            <li><strong>安全监控：</strong>定期监控系统安全状态</li>
+            <li><strong>应急响应：</strong>建立完善的安全事件应急响应机制</li>
+        </ul>
+
+        <h2>13. 未成年人保护</h2>
+        <ul>
+            <li>本应用不面向13岁以下儿童</li>
+            <li>如发现误收集未成年人信息，我们将立即删除</li>
+            <li>监护人可联系我们删除未成年人相关信息</li>
+        </ul>
+
+        <h2>14. 隐私政策更新</h2>
+        <ul>
+            <li>我们可能会不时更新本隐私政策</li>
+            <li>重大变更时，我们会在App内显著位置进行公告</li>
+            <li>建议您定期查阅本政策的最新版本</li>
+            <li>继续使用本应用即表示您同意更新后的隐私政策</li>
+        </ul>
+
+        <div class="contact">
+            <p><strong>重要提示：</strong></p>
             <p>未同意本隐私政策前，应用不会初始化任何敏感SDK，也不会申请任何敏感权限，部分功能将无法使用。同意本政策即表示您已充分理解并同意我们对您的个人信息的收集和使用。</p>
         </div>
     </div>
